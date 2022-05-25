@@ -1,15 +1,21 @@
 import { useState } from 'react'
 import Axios from 'axios'
 
-// const dotenv = require('dotenv')
-// dotenv.config()
-
 function App() {
   const [id, setId] = useState('')
   const [email, setEmail] = useState('')
   const [comment, setComment] = useState('')
-  const axiosIns = Axios.create({ baseURL: 'http://localhost:8080' })
-  console.log(process.env.API_URL)
+
+  const axiosIns = Axios.create({ baseURL: process.env.REACT_APP_API_URL })
+  // process.env.API_URL
+  const handleClick = (e) => {
+    e.preventDefault()
+    axiosIns
+      .post('/addpostmock', {
+        msg: 'Message from client...',
+      })
+      .then((res) => console.log(res.data))
+  }
   // process.env.API_URL
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -24,12 +30,6 @@ function App() {
       })
       .then((res) => console.log(res.data))
   }
-  //   Axios.post('http://localhost:8080/addpost', {
-  //     id: date,
-  //     email: email,
-  //     comment: comment,
-  //   }).then((res) => console.log(res.data))
-  //  }
 
   const handleChange = (e) => {
     if (e.target.id === 'floatingInput') {
@@ -63,8 +63,11 @@ function App() {
           ></textarea>
           <label htmlFor="floatingTextarea">Comments</label>
         </div>
-        <button type="submit" className="btn btn-primary hover">
+        <button type="submit" className="btn btn-primary hover m-3">
           Submit
+        </button>
+        <button onClick={handleClick} className="btn btn-primary hover">
+          backend
         </button>
       </form>
     </div>

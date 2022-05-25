@@ -17,13 +17,13 @@ const db = mysql.createConnection({
   database: process.env.DB_DATABASE,
 })
 
-// Connect
-db.connect((err) => {
-  if (err) {
-    throw err
-  }
-  console.log('MySql Connected...')
-})
+// // Connect
+// db.connect((err) => {
+//   if (err) {
+//     throw err
+//   }
+//   console.log('MySql Connected...')
+// })
 
 app.post('/addpost', (req, res) => {
   const id = req.body.id
@@ -40,6 +40,12 @@ app.post('/addpost', (req, res) => {
       res.send('Values Inserted')
     }
   })
+})
+
+app.post('/addpostmock', (req, res) => {
+  const msg = req.body.msg
+  console.log(msg)
+  res.send('MSG from backend')
 })
 
 app.listen(port, () => {
