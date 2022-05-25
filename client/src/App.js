@@ -1,23 +1,35 @@
 import { useState } from 'react'
 import Axios from 'axios'
 
+// const dotenv = require('dotenv')
+// dotenv.config()
+
 function App() {
   const [id, setId] = useState('')
   const [email, setEmail] = useState('')
   const [comment, setComment] = useState('')
-  const host = window.location.host
-
+  const axiosIns = Axios.create({ baseURL: 'http://localhost:8080' })
+  console.log(process.env.API_URL)
+  // process.env.API_URL
   const handleSubmit = (e) => {
     e.preventDefault()
     const date = new Date().getTime().toString()
     setId(date)
-    console.log(host)
-    Axios.post('http://localhost:8080/addpost', {
-      id: date,
-      email: email,
-      comment: comment,
-    }).then((res) => console.log(res.data))
+
+    axiosIns
+      .post('/addpost', {
+        id: date,
+        email: email,
+        comment: comment,
+      })
+      .then((res) => console.log(res.data))
   }
+  //   Axios.post('http://localhost:8080/addpost', {
+  //     id: date,
+  //     email: email,
+  //     comment: comment,
+  //   }).then((res) => console.log(res.data))
+  //  }
 
   const handleChange = (e) => {
     if (e.target.id === 'floatingInput') {
