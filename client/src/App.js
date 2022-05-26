@@ -11,7 +11,7 @@ function App() {
   const handleClick = (e) => {
     e.preventDefault()
     axiosIns
-      .post('/addpostmock', {
+      .post('/api/addpostmock', {
         msg: 'Message from client...',
       })
       .then((res) => console.log(res.data))
@@ -23,7 +23,7 @@ function App() {
     setId(date)
 
     axiosIns
-      .post('/addpost', {
+      .post('/api/addpost', {
         id: date,
         email: email,
         comment: comment,

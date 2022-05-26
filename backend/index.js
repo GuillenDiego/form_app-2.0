@@ -25,7 +25,7 @@ const db = mysql.createConnection({
 //   console.log('MySql Connected...')
 // })
 
-app.post('/addpost', (req, res) => {
+app.post('/api/addpost', (req, res) => {
   const id = req.body.id
   const email = req.body.email
   const comment = req.body.comment
@@ -42,7 +42,7 @@ app.post('/addpost', (req, res) => {
   })
 })
 
-app.post('/addpostmock', (req, res) => {
+app.post('/api/addpostmock', (req, res) => {
   const msg = req.body.msg
   console.log(msg)
   res.send('MSG from backend')
