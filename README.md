@@ -1,12 +1,13 @@
 # form_app-2.0
-# strait run ###################################################################################
-sudo -i
+## Install and configure nginx
+
+`sudo -i
 apt clean all && sudo apt update && sudo apt dist-upgrade
 rm -rf /var/www/html
 apt install -y nginx 
 rm /etc/nginx/sites-available/default
 rm /etc/nginx/sites-enabled/default
-nano /etc/nginx/sites-available/netflix
+nano /etc/nginx/sites-available/netflix`
 
 #Use public ip of web server
 server {
