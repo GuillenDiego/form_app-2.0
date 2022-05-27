@@ -21,11 +21,13 @@ find /var/www -type f -exec chmod 0664 {} \;
 echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 ```
 ## On cli of instance
-change password of root user of the DB
-````
+change password for root user of the DB
+
+```
 sudo systemctl start mariadb
 sudo mysql_secure_installation
 ```
+
 ## Install phpMyAdmin
 ```
 sudo systemctl enable mariadb
