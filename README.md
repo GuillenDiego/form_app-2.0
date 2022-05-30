@@ -1,14 +1,19 @@
 # form_app-2.0
 
 1. Deployment of  MySQL Express React Node.JS 
-2. Deploy DB server first and make new user
+2. Enable port 8080 for webserver on Security Groups
+3. Deploy DB server first and make new user
 Set DB = posts and table = posts
 ## Install and configure nginx
 
 ```
 sudo -i
 apt clean all && sudo apt update && sudo apt dist-upgrade
+```
+```
 apt install -y nginx 
+```
+```
 rm -rf /var/www/*
 rm /etc/nginx/sites-available/default
 rm /etc/nginx/sites-enabled/default
