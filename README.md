@@ -8,8 +8,8 @@ Set DB = posts and table = posts
 ```
 sudo -i
 apt clean all && sudo apt update && sudo apt dist-upgrade
-rm -rf /var/www/*
 apt install -y nginx 
+rm -rf /var/www/*
 rm /etc/nginx/sites-available/default
 rm /etc/nginx/sites-enabled/default
 nano /etc/nginx/sites-available/netflix
