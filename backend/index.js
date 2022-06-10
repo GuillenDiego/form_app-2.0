@@ -17,13 +17,15 @@ const db = mysql.createConnection({
   database: process.env.DB_DATABASE,
 })
 
- // Connect
- db.connect((err) => {
-   if (err) {
-     console.log(err)
-   }
-   console.log('MySql Connected...')
- })
+// Connect
+db.connect((err) => {
+  if (err) {
+    console.log(err)
+    console.log('Error in db connection...')
+  } else {
+    console.log('MySql Connected...')
+  }
+})
 
 app.post('/api/addpost', (req, res) => {
   const id = req.body.id
