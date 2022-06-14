@@ -8,7 +8,7 @@ Set DB = posts and table = posts
 
 ```
 sudo -i
-apt clean all && sudo apt update && sudo apt dist-upgrade
+apt clean all && sudo apt update && sudo apt dist-upgrade -y
 ```
 ```
 apt install -y nginx 
