@@ -1,8 +1,9 @@
 # form_app-2.0
 
-1. Deployment of  MySQL Express React Node.JS 
-2. Enable port 8080 for webserver on Security Groups
-3. Deploy DB server first and make new user
+1. Deploy Ubuntu 20.04 server
+2. Deployment of  MySQL Express React Node.JS 
+3. Enable port 8080 for webserver on Security Groups
+4. Deploy DB server first and make new user
 Set DB = posts and table = posts
 ## Install and configure nginx
 
