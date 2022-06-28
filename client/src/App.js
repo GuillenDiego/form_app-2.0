@@ -13,6 +13,7 @@ function App() {
     axiosIns
       .post('/api/addpostmock', {
         msg: 'Message from client...',
+        id_prefix: '1',
       })
       .then((res) => console.log(res.data))
   }
@@ -24,7 +25,7 @@ function App() {
 
     axiosIns
       .post('/api/addpost', {
-        id: date,
+        id: 'date',
         email: email,
         comment: comment,
       })
