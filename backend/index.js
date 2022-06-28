@@ -52,7 +52,7 @@ app.post('/api/addpost', (req, res) => {
 
 app.post('/api/addpostmock', (req, res) => {
   const msg = req.body.msg
-  const id_prefix = req.body.id_prefix
+  const id_prefix = '1'
 
   id_count.d1 = id_count.d1 + 1
   const id = id_prefix + zeropad(id_count.d1, 4)

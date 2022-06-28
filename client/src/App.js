@@ -13,7 +13,6 @@ function App() {
     axiosIns
       .post('/api/addpostmock', {
         msg: 'Message from client...',
-        id_prefix: '1',
       })
       .then((res) => console.log(res.data))
   }
