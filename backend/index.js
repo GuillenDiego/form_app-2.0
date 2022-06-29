@@ -57,6 +57,32 @@ app.post('/api/addpostmock', (req, res) => {
   id_count.d1 = id_count.d1 + 1
   const id = id_prefix + zeropad(id_count.d1, 4)
 
+  const nombre_primero = 'Ramona'
+  const nombre_segundo = 'Josefina'
+  const apellido_primero = 'Gonzales'
+  const apeliddo_segundo = 'Figueroa'
+  const apellido_casada = 'Perez'
+  const correo = 'ramondeaperez@gmail.com'
+  const telefono = '47707544'
+  const direccion_completa = '5 ave final, colinas de minerva Z8. Mixco'
+  const direccion = '5 calle'
+  const zona = '8'
+  const colonia = 'Colinas de minerva'
+  const ciudad = 'Mixco'
+  const departamento = 'Guatemala'
+  const pais = 'Guatemala'
+  const nacimiento = '1995-12-03'
+  const estado_civil = 'casado'
+  const sede = 'Sede'
+  const area = '3'
+  const distrito = '23'
+  const conversion = '2005-11-15'
+  const bautizado = 'true'
+  const bautismo = '2006-08-23'
+  const trabajo = 'Pollo Campero'
+  const hijos = 'true'
+  const edades_hijos = 'Edgar 8, Maria 12'
+
   console.log(msg)
   console.log(id)
   res.send('MSG from backend')
