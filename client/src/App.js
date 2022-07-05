@@ -74,7 +74,6 @@ function App() {
               type="First name"
               className="form-control"
               id="nombre_primero"
-              placeholder="Carlos"
               onChange={handleChange}
             ></input>
           </div>
@@ -84,7 +83,6 @@ function App() {
               type="Second name"
               className="form-control"
               id="nombre_segundo"
-              placeholder="Rigoberto"
               onChange={handleChange}
             ></input>
           </div>
@@ -95,7 +93,6 @@ function App() {
               type="Last Name"
               className="form-control"
               id="apellido_primero"
-              placeholder="Perez"
               onChange={handleChange}
             ></input>
           </div>
@@ -105,7 +102,6 @@ function App() {
               type="Last name"
               className="form-control"
               id="apellido_segundo"
-              placeholder="Galvez"
               onChange={handleChange}
             ></input>
           </div>
@@ -120,7 +116,6 @@ function App() {
                 type="text"
                 className="form-control"
                 id="apellido_casada"
-                placeholder="Ramirez"
                 aria-label="Ramirez"
                 aria-describedby="de-addon"
                 onChange={handleChange}
@@ -246,12 +241,13 @@ function App() {
             onChange={handleChange}
           ></input>
         </div>
-        <div className="col-2">
-          Email<label htmlFor="email"></label>
+        <div className="mb-3">
+          <label htmlFor="email">Correo</label>
           <input
-            type="Last name"
+            type="email"
             className="form-control"
             id="email"
+            placeholder="correo"
             onChange={handleChange}
           ></input>
         </div>
@@ -356,16 +352,6 @@ function App() {
           ></input>
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="email">Correo</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="correo"
-            onChange={handleChange}
-          ></input>
-        </div>
         <button type="submit" className="btn btn-primary hover m-3">
           Submit
         </button>
